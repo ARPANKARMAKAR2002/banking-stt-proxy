@@ -36,7 +36,7 @@ export default async function handler(req, res) {
 
     // Build new form-data to forward to OCI STT
     const fd = new FormData();
-    fd.append("media", fs.createReadStream(file.filepath), file.originalFilename, contentType: mimeType,);
+    fd.append("media", fs.createReadStream(file.filepath),{ filename: file.originalFilename, contentType: file.mimetype || "audio/wav" });
 
     // Forward request to OCI STT service
     const response = await axios.post(BASE_URL, fd, {
