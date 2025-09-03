@@ -13,7 +13,7 @@ const BASE_URL = "http://140.245.5.226:9000/api/v1/voice/stt";
 
 export default async function handler(req, res) {
   // ✅ CORS headers
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://apex.oracle.com");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
